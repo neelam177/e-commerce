@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -10,3 +11,5 @@ Route::get('/user', function (Request $request) {
 Route::get("test", function () {
     return ["name" => "Neelam Gupta", 'channel' => "coding steps"];
 });
+
+Route::get('students',[EmployeeController::class,'list']);
