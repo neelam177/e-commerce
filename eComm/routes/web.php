@@ -95,8 +95,6 @@ Route::controller(StudentControllerPrefix::class)->group(function () {
 // Route::view('homeroutes','homeMiddleware')->middleware(AgeCheck::class);
 // we can also use middleware in multiple routes
 
-Route::view('homeroutes','homeMiddleware')->middleware([AgeCheck::class,CountryCheck::class]);
+Route::view('homeroutes', 'homeMiddleware')->middleware([AgeCheck::class, CountryCheck::class]);
 //we can also check only single middleware
-Route::view('aboutroutes','homeMiddleware')->middleware([CountryCheck::class]);
-
-
+Route::view('aboutroutes', 'homeMiddleware')->middleware([CountryCheck::class]);
